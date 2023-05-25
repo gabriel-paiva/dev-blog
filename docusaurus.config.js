@@ -11,15 +11,17 @@ const config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://gabriel-paiva.github.io/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/dev-blog/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "gabriel-paiva", // Usually your GitHub org/user name.
   projectName: "dev-blog", // Usually your repo name.
+  deploymentBranch: "main",
+  trailingSlash: true,
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -92,10 +94,6 @@ const config = {
           {
             title: "More",
             items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
               {
                 label: "GitHub",
                 href: "https://github.com/gabriel-paiva",
