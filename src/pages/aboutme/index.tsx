@@ -13,7 +13,7 @@ function HomepageHeader() {
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <h1>Bem-vindos</h1>
+          <h1>Olá Mundo</h1>
         </div>
       </div>
     </header>
