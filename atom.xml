@@ -8,7 +8,7 @@
     <subtitle>Dev Blog Blog</subtitle>
     <icon>https://gabriel-paiva.github.io/dev-blog/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[MDX Blog Post]]></title>
+        <title type="html"><![CDATA[Test MDX]]></title>
         <id>https://gabriel-paiva.github.io/dev-blog/mdx-blog-post</id>
         <link href="https://gabriel-paiva.github.io/dev-blog/mdx-blog-post"/>
         <updated>2023-05-23T00:00:00.000Z</updated>
