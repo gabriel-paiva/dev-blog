@@ -9,6 +9,8 @@ on:
 
 jobs:
   deploy:
+    env:
+      REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID: "${{secrets.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID}}"
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:

@@ -3,6 +3,17 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const GOOGLE_ANALYTICS_ID = process.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID;
+
+let gtagConfig;
+if (GOOGLE_ANALYTICS_ID) {
+  gtagConfig = {
+    trackingID: GOOGLE_ANALYTICS_ID,
+    anonymizeIP: true,
+  };
+}
+
+console.log({ gtagConfig });
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -47,17 +58,8 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
+        gtag: gtagConfig,
       }),
-    ],
-  ],
-
-  plugins: [
-    [
-      "@docusaurus/plugin-google-gtag",
-      {
-        trackingID: "G-NL1CXEN8Y6",
-        anonymizeIP: true,
-      },
     ],
   ],
 
@@ -73,7 +75,7 @@ const config = {
           src: "img/logo.svg",
         },
         items: [
-          { to: "/aboutme", label: "Sobre Mim", position: "left" },
+          // { to: "/aboutme", label: "Sobre Mim", position: "left" },
           {
             href: "https://github.com/gabriel-paiva",
             label: "GitHub",
