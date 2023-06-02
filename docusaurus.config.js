@@ -13,8 +13,6 @@ if (GOOGLE_ANALYTICS_ID) {
   };
 }
 
-console.log({ gtagConfig });
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Dev Blog",
@@ -25,7 +23,7 @@ const config = {
   url: "https://gabriel-paiva.github.io/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/dev-blog/",
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
