@@ -9,7 +9,7 @@ tags: [blog, azure, pipelines, static]
 
 Para construir o seu blog com Docusaurus siga a documentação [clicando aqui](https://docusaurus.io/pt-BR/docs/installation).
 
-Coloque o seu projeto no Github antes de começar a seguir esse tutorial. Caso não saiba, siga esse tutorial: #######
+Coloque o seu projeto no Github antes de começar a seguir esse tutorial. Caso não saiba, siga esse passo a passo [clicando aqui](https://docs.github.com/pt/get-started/quickstart/create-a-repo).
 
 Esse artigo focará mais no deploy do blog com o Microsoft Azure.
 
@@ -33,7 +33,17 @@ Na barra de pesquisa dessa página inicial da Microsoft Azure, vamos pesquisar p
 
 ![Pesquisa Azure Static Web Apps](./04-azure-swa-service.png)
 
-// TODO: O QUE É STATIC WEB APPS
+:::info O é o Static Web Apps?
+
+O Azure Static Web Apps é um serviço que automatiza o build e o deploy de aplicativos full-stack para a web, conectando um repositório de código à plataforma da Azure. Utilizando esse serviço, o aplicativo pode ser atualizado na nuvem facilmente a cada alteração no código. Isso é possível através da interação direta do Azure com o Github ou Azure DevOps, que monitora o repositório.
+
+![Overview Azure Static Web Apps](./azure-static-web-apps-overview.png)
+
+O serviço do Static Web Apps é geralmente utilizado para aplicações construídas com frameworks como Angular, React, Svelte, Vue ou Blazor, onde não é necessário fazer renderizações do lado do servidor (SSR). Utilizando um servidor web tradicional, o Static Web Apps é capaz de servir os arquivos (páginas, imagens ou endpoints) para o cliente (navegador).
+
+Esse serviço é distribuido geograficamente ao redor do mundo para prover maior velocidade aos usuários, já que os arquivos ficam fisicamente mais próximos dos clientes.
+
+:::
 
 Na tela inicial do serviço, clique no botão “Criar static web app”.
 
@@ -47,8 +57,16 @@ Após conectar com o Github, o Azure permitirá a escolha de uma organização, 
 
 ![Configuração de build](./07-configure-build.png)
 
-Com tudo configurado, clicamos em “Revisar + Criar”. O Microsoft Azure fará uma verificação do projeto e então habilitará o botão de “Criar”. Clicamos nele para prosseguir. Com isso, se voltarmos ao repositório no Github, vamos perceber que o Azure fez um novo commit (utilizando sua conta conectada) na branch escolhida, adicionando um arquivo que se conecta ao GIthub Actions.
+Com tudo configurado, clicamos em “Revisar + Criar”. O Microsoft Azure fará uma verificação do projeto e então habilitará o botão de “Criar”. Clicamos nele para prosseguir. Com isso, se voltarmos ao repositório no Github, vamos perceber que o Azure fez um novo commit (utilizando sua conta conectada) na branch escolhida, adicionando um arquivo que se conecta ao Github Actions.
 
-// TODO: explicar Github Actions
+:::info O é o Github Actions?
+
+GitHub Actions é uma plataforma de integração contínua e entrega contínua (CI/CD) que permite automatizar a compilação, teste e implantação de códigos e aplicativos. É possível criar fluxos de trabalho que criam e testam cada pull request no seu repositório, ou implantar pull requests mesclados em produção.
+
+![Github Actions](./overview-actions.webp)
+
+Os fluxos de trabalho do GitHub Actions contém eventos, trabalhos, executors e actions.
+
+:::
 
 De volta ao Azure, veremos a tela do nosso projeto. Nela, estarão disponíveis vários dados sobre ele, inclusive a URL de acesso. Se tudo der certo, o site já deve estar disponível na nuvem para ser acessado de qualquer lugar do mundo.
